@@ -1,0 +1,33 @@
+<include target="header.html"/>
+
+<strong style="color: red"> 추출시 포함시킬 확장변수를 선택하여주세요. </strong>
+
+<form method="post" action="./">
+    <input type="hidden" name="act" value="dispPhpexcel_moduleAdminDownloadBoard_xlsx">
+    <input type="hidden" name="module" value="{$module}">
+    <input type="hidden" name="module_srl" value="{$module_srl}">
+
+    <table class="x_table x_table-striped x_table-hover">
+        <thead>
+        <tr class="nowr">
+            <th><input type="checkbox"></th>
+            <th>사용자 정의 이름</th>
+            <th>입력항목 이름</th>
+            <th>형식</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr loop="$extraVars=>$extraVar">
+            <td><input name="eid[]" type="checkbox" value="{$extraVar->eid}"></td>
+            <td>{$extraVar->eid}</td>
+            <td>{$extraVar->name}</td>
+            <td>{$extraVar->type}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="x_pull-right x_btn-group">
+        <button class="x_btn" type="submit">{$lang->save}</button>
+    </div>
+</form>

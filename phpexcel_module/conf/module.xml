@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <grants/>
+    <permissions/>
+    <actions>
+        <action name="dispPhpexcel_moduleAdminIndex" type="view" admin_index="true" menu_name="phpexcel_module" menu_index="true"/>
+        <action name="dispPhpexcel_moduleAdminDownloadBoard_extVarsFilter" type="view" menu_name="phpexcel_module"/>
+        <action name="dispPhpexcel_moduleAdminDownloadBoard_xlsx" type="view" menu_name="phpexcel_module"/>
+    </actions>
+
+    <menus>
+        <menu name="phpexcel_module">
+            <title xml:lang="ko">XLSX 데이터 내보내기</title>
+            <title xml:lang="ja">XLSXデータのエクスポート</title>
+            <title xml:lang="en">XLSX Data Export</title>
+        </menu>
+    </menus>
+</module>
+

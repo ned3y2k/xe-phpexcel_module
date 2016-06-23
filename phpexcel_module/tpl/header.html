@@ -1,0 +1,15 @@
+<div class="x_page-header">
+    <h1>
+        {$title}
+        <a href="#aboutModule" data-toggle="" class="x_icon-question-sign">도움말</a>
+    </h1>
+</div>
+<p class="x_alert x_alert-info" id="aboutModule" hidden>찾아가는 장애인식개선 교육 모듈 관리자</p>
+
+<div cond="$XE_VALIDATOR_MESSAGE && $XE_VALIDATOR_ID == ''" class="message {$XE_VALIDATOR_MESSAGE_TYPE}">
+    <p>{$XE_VALIDATOR_MESSAGE}</p>
+</div>
+
+<ul class="x_nav x_nav-tabs">
+    <li class="x_active"|cond="in_array($act, array('dispPhpexcel_moduleAdminIndex', 'dispPhpexcel_moduleAdminDownloadBoard_extVarsFilter'))"><a href="{getUrl('act', 'dispPhpexcel_moduleAdminIndex')}">게시판 추출</a></li>
+</ul>

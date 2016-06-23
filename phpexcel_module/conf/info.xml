@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+    <title xml:lang="ko">PHPExcel</title>
+	<title xml:lang="en">PHPExcel</title>
+	<description xml:lang="ko">외부모듈에서 엑셀 추출 기능이 필요한 경우나 게시판, 회원 내용 추출에 사용</description>
+	<description xml:lang="en">If you need Excel features extracted from the module or Export Board/Member Data</description>
+	<description xml:lang="ja">外部モジュールでエクセルの抽出機能が必要な場合や掲示板、会員情報の抽出に使用</description>
+    <version>0.1</version>
+    <date>2016-06-08</date>
+    <category>system</category>
+
+    <author email_address="ned3y2k@gmail.com" link="http://ned3y2k.co.kr/">
+        <name xml:lang="ko">ned3y2k</name>
+        <name xml:lang="en">ned3y2k</name>
+        <name xml:lang="ja">ned3y2k</name>
+    </author>
+</module>
