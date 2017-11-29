@@ -8,11 +8,11 @@
 require_once 'vendor/phpexcel/Classes/PHPExcel.php';
 class phpexcel_module extends ModuleObject {
 
-	public function moduleInstall() { return new Object(); }
+	public function moduleInstall() { return $this->createObject(); }
 
 	public function checkUpdate() { }
 
-	public function moduleUpdate() { return new Object(0, 'success_updated'); }
+	public function moduleUpdate() { return $this->createObject(0, 'success_updated'); }
 
 	public function recompileCache() { }
 
@@ -25,4 +25,12 @@ class phpexcel_module extends ModuleObject {
 	public function getContext() { return Context::getInstance(); }
 
 	public function getContextVar($key) { return $this->getContext()->get($key); }
+
+    protected function createObject($error = 0, $message = 'success') {
+        if(class_exists("BaseObject")) {
+            return new BaseObject($error, $message);
+        } else {
+            return new Object($error, $message);
+        }
+    }
 }

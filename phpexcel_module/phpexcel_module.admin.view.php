@@ -18,7 +18,7 @@ class phpexcel_moduleAdminView extends phpexcel_module {
 
 		$output = executeQueryArray('board.getAllBoard');
 		if ($output->error) {
-			return new Object($output->error, $output->message);
+			return $this->createObject($output->error, $output->message);
 		}
 		ModuleModel::syncModuleToSite($output->data);
 
